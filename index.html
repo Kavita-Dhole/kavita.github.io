@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kavita Dhole | Backend Java, AI Prototyping & AI Governance</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --border: #e2e8f0;
+      --badge-bg: #eff6ff;
+      --badge-text: #1e40af;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 { font-size: 1.85rem; margin-bottom: 0.35rem; }
+    .tagline {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    .bio { color: var(--muted); margin-bottom: 1.25rem; }
+    .badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem; }
+    .badge {
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .social-links { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .btn {
+      display: inline-block;
+      padding: 0.55rem 1.1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent-hover); }
+    .btn-outline { border: 1px solid var(--border); color: var(--text); background: #fff; }
+    .btn-outline:hover { background: #f1f5f9; }
+    h2 { font-size: 1.3rem; margin: 1.5rem 0 1rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .project-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .project-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .project-card p { color: var(--muted); font-size: 0.92rem; margin-bottom: 1rem; }
+    .project-tag {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.4rem;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-top: 2.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Kavita Dhole</h1>
+      <div class="tagline">Backend Java Engineer & Quality Specialist | AI-Assisted Prototyping | AI Governance</div>
+      <p class="bio">
+        Based in Belgium, I combine hands-on backend <strong>Java development</strong> and <strong>software quality assurance</strong> with rapid <strong>AI-assisted prototyping</strong> to build reliable digital solutions. I am also actively expanding my expertise in <strong>AI Governance</strong> and <strong>EU AI Act</strong> readiness—bridging engineering discipline with European regulatory standards.
+      </p>
+      <div class="badges">
+        <span class="badge">Java & Backend Systems</span>
+        <span class="badge">Apache Kafka</span>
+        <span class="badge">Quality Assurance (QA)</span>
+        <span class="badge">AI-Assisted Prototyping</span>
+        <span class="badge">EU AI Act & AI QMS</span>
+      </div>
+      <div class="social-links">
+        <a class="btn btn-primary" href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn Profile</a>
+        <a class="btn btn-outline" href="https://malt.com" target="_blank" rel="noopener">Malt Freelance Profile</a>
+        <a class="btn btn-outline" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </header>
+
+    <h2>Featured Projects & Prototypes</h2>
+    <div class="grid" id="projects-container"></div>
+
+    <footer>
+      Vilvoorde / Brussels, Belgium • Open to Backend Java, QA & AI Governance collaborations
+    </footer>
+  </div>
+
+  <script>
+    // ============================================================
+    // EASY EDIT ZONE: Update your prototype links anytime right here!
+    // ============================================================
+    const PROJECTS = [
+      {
+        category: "Backend Engineering",
+        title: "Event-Driven Messaging with Java & Kafka",
+        description: "Backend architecture implementing asynchronous producer-consumer event workflows with Java and Apache Kafka.",
+        linkText: "View on GitHub →",
+        url: "https://github.com" // <-- Replace with your exact Kafka repo URL
+      },
+      {
+        category: "AI-Assisted Prototype",
+        title: "Interactive News Feed Web App",
+        description: "Rapidly prototyped and deployed a functional news feed web application using Replit and AI-assisted coding workflows.",
+        linkText: "View App / Post →",
+        url: "https://linkedin.com" // <-- Replace with your Replit or LinkedIn post URL
+      },
+      {
+        category: "AI Governance & Compliance",
+        title: "EU AI Act & AI QMS Insights",
+        description: "Practical breakdowns mapping EU AI Act requirements, risk assessments, and Quality Management Systems for builders.",
+        linkText: "Read on LinkedIn →",
+        url: "https://linkedin.com" // <-- Replace with your EU AI Act LinkedIn post URL
+      }
+    ];
+
+    const container = document.getElementById("projects-container");
+    PROJECTS.forEach(project => {
+      const card = document.createElement("div");
+      card.className = "project-card";
+      card.innerHTML = `
+        <div>
+          <div class="project-tag">${project.category}</div>
+          <h3>${project.title}</h3>
+          <p>${project.description}</p>
+        </div>
+        <a class="btn btn-outline" href="${project.url}" target="_blank" rel="noopener">${project.linkText}</a>
+      `;
+      container.appendChild(card);
+    });
+  </script>
+</body>
+</html>
